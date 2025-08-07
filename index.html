@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Norme FprEN 18100:2025 - Casques de ski-alpinisme</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      background-color: #fff;
+      color: #222;
+      transition: background 0.3s, color 0.3s;
+    }
+    header {
+      background-color: #ff6600;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    h1, h2, h3 {
+      color: inherit;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .dark-mode {
+      background-color: #111;
+      color: #eee;
+    }
+    .toggle-darkmode {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: #333;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+    details {
+      margin: 1rem 0;
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .dark-mode details {
+      background: #1e1e1e;
+    }
+    .card {
+      background: #fdfdfd;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      margin: 1rem 0;
+      transition: transform 0.3s;
+      cursor: pointer;
+      perspective: 1000px;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .figure-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: #ff6600;
+      cursor: pointer;
+    }
+    .lightbox {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+    .lightbox:target {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Casques de ski-alpinisme — FprEN 18100:2025</h1>
+    <p>Mémo interactif pour l'équipe Conformité Réglementaire</p>
+  </header>
+
+  <button class="toggle-darkmode" onclick="toggleDarkMode()">🌓 Mode Sombre</button>
+
+  <main class="container">
+
+    <section>
+      <h2>📌 Introduction</h2>
+      <p>Cette norme vise à remplacer la double certification EN 1077 / EN 12492 et propose des exigences spécifiques aux risques rencontrés en ski-alpinisme : chutes, impacts, ventilation, confort et ergonomie.</p>
+    </section>
+
+    <section>
+      <h2>🧠 Définitions (exemples)</h2>
+      <div class="card" onclick="alert('HPI = Distance verticale entre le front du casque et le plan de référence sur un têteforme standardisé.')">
+        <strong>HPI - Helmet Positioning Index</strong> (Cliquez pour définition)
+        <div><a class="figure-link" href="#fig1">Voir Figure 1</a></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🔧 Exigences de construction</h2>
+      <details>
+        <summary>Matériaux</summary>
+        <p>Pas de matériaux irritants, conformes à l'EN ISO 13688:2013.</p>
+      </details>
+      <details>
+        <summary>Ventilation</summary>
+        <p>Surface d'aération ≥ 4 cm², sans contact avec le têteforme lorsqu'une tige de 20 mm est insérée.</p>
+      </details>
+    </section>
+
+    <section>
+      <h2>📈 Exigences de performance</h2>
+      <details>
+        <summary>Absorption des chocs</summary>
+        <p>Force transmise ≤ 10kN / Accélération ≤ 250g.</p>
+      </details>
+      <details>
+        <summary>Pénétration</summary>
+        <p>Pas de contact entre le poinçon conique et le têteforme. <a class="figure-link" href="#fig4">Voir Figure 4</a></p>
+      </details>
+    </section>
+
+    <section>
+      <h2>🧪 Méthodes d’essai</h2>
+      <details>
+        <summary>Positionnement et impact</summary>
+        <p>4 zones d’impact testées avec différents strikers.<br><a class="figure-link" href="#fig2">Voir Figure 2</a></p>
+      </details>
+      <details>
+        <summary>Zone de test de l’absorption</summary>
+        <p><a class="figure-link" href="#fig3">Voir Figure 3</a></p>
+      </details>
+      <details>
+        <summary>Appareil de test du système de rétention</summary>
+        <p><a class="figure-link" href="#fig5">Voir Figure 5</a></p>
+      </details>
+    </section>
+
+    <section>
+      <h2>🏷️ Marquage obligatoire</h2>
+      <ul>
+        <li>Numéro de norme (EN 18100:2025)</li>
+        <li>Nom ou marque du fabricant</li>
+        <li>Date de fabrication (MM/AAAA)</li>
+        <li>Taille et poids du casque</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>📄 Notice d’utilisation</h2>
+      <ul>
+        <li>Instructions de réglage, nettoyage, stockage</li>
+        <li>Avertissement : ne remplace pas un casque EN 1077</li>
+        <li>Liste des accessoires compatibles</li>
+        <li>Durée de vie estimée et critères de remplacement</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Lightbox images -->
+  <div id="fig1" class="lightbox" onclick="location.href='#'">
+    <img src="images/fig1_helmet_positioning_index.png" alt="Figure 1 - Indice de positionnement du casque" />
+  </div>
+  <div id="fig2" class="lightbox" onclick="location.href='#'">
+    <img src="images/fig2_impact_points.png" alt="Figure 2 - Points d’impact" />
+  </div>
+  <div id="fig3" class="lightbox" onclick="location.href='#'">
+    <img src="images/fig3_test_area.png" alt="Figure 3 - Zone de test" />
+  </div>
+  <div id="fig4" class="lightbox" onclick="location.href='#'">
+    <img src="images/fig4_penetration_test_block.png" alt="Figure 4 - Bloc de test de pénétration" />
+  </div>
+  <div id="fig5" class="lightbox" onclick="location.href='#'">
+    <img src="images/fig5_retention_test_apparatus.png" alt="Figure 5 - Test du système de rétention" />
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
